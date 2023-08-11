@@ -3,6 +3,9 @@ import { http } from "@/plugins/axios"
 interface User {
 	name: string
 }
+interface Login {
+	token: string
+}
 class userApi {
 	info() {
 		return http.request<User>({
@@ -10,7 +13,7 @@ class userApi {
 		})
 	}
 	login() {
-		return http.request({
+		return http.request<Login>({
 			url: "login"
 		})
 	}
