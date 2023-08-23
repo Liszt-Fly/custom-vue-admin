@@ -6,6 +6,7 @@ import zh_CN from "@vee-validate/i18n/dist/locale/zh_CN.json"
 import yup from "./yup"
 //批量定义rules
 configure({
+    validateOnBlur:true,
     generateMessage:localize("zh_CN",zh_CN)
 })
 Object.keys(rules).forEach(key => defineRule(key, rules[key]))

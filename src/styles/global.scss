@@ -1,0 +1,6 @@
+.m-error{
+    @apply rounded-md text-red-800   text-sm;
+}
+.m-input {
+	@apply  border border-gray-200 rounded-sm py-1 px-2 w-full  outline-none focus:ring-2 ring-offset-2 ring-purple-600 focus:border-white;
+}

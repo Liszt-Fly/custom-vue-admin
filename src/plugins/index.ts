@@ -1,4 +1,5 @@
 import { App } from "vue"
+import '@/styles/global.scss'
 import { setupTailwindcss } from "./tailwindcss"
 
 export function setupPlugin(app: App) {
