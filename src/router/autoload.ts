@@ -41,4 +41,5 @@ function getRoutes() {
 }
 
 const routes = env.VITE_ROUTE_AUTOLOAD === true ? getRoutes() : []
+console.log('routes', routes)
 export default routes
