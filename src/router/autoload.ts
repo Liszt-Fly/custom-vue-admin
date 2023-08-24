@@ -22,7 +22,6 @@ function getChildrenRoutes(layout_route: RouteRecordRaw) {
 
 function getRouteByModule(file: string, module: Record<string, any>): RouteRecordRaw {
 	const name = file.replace(/.+layouts\/|.+views\/|\.vue/gi, "")
-	console.log('name', name)
 	const route: RouteRecordRaw = {
 		name,
 		path: `/${name}`,

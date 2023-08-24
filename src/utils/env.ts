@@ -11,4 +11,4 @@ Object.entries(import.meta.env as Record<string, any>).forEach(
     }
 );
 
-export default envs as ViteEnv
+export default envs as ViteEnv 

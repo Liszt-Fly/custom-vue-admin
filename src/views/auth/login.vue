@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import userApi from "@/apis/user";
 import v from "@/plugins/validate";
+import router from "@/router";
 import { store } from "@/utils";
 const { Form, Field, ErrorMessage } = v
 
@@ -10,7 +11,8 @@ const schema = {
 }
 const onsubmit = async (values: any) => {
 	let res = await userApi.login(values)
-	store.set('token', { expire: 100, token: res.data.token })
+	store.set('token', { expire: 100000, token: res.data.token })
+	router.push({ name: "home" })
 }
 </script>
 <template>
@@ -48,3 +50,9 @@ const onsubmit = async (values: any) => {
 </template>
 
 <style lang="scss" scoped></style>
+
+<script lang="ts">
+export default {
+	route: { name: "login", auth: false }
+}
+</script>types/utils

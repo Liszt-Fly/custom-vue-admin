@@ -3,3 +3,8 @@
     <router-view></router-view>
 </template>
 
+<script lnag="ts">
+export default {
+    route: { meta: { auth: true } }
+}
+</script>
